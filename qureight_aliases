@@ -1,0 +1,26 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# tailscale
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
+# aws
+export AWS_DEFAULT_REGION=eu-west-2
+alias awsv="aws-vault exec cameron --duration=4h -- aws"
+alias awv="aws-vault exec cameron --duration=8h -- "
+alias k="aws-vault exec cameron --duration=4h -- kubectl"
+alias k9="aws-vault exec cameron --duration=4h -- k9s"
+
+# qureight
+export QUR8ML_DSM_ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInNpZ25lciI6InNlbGYiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJhdXRoMHw2NjBiZTcyODAzYTQ1YzEzNDcyYTNhNjkiLCJuYW1lIjoiQ2FtZXJvbiBXaWxzb24iLCJlbWFpbCI6bnVsbCwibmlja25hbWUiOiJjLndpbHNvbiIsInVzZXJuYW1lIjoiYy13aWxzb24tNjYwYiIsImRpc2FibGVkIjpudWxsLCJzY29wZXMiOlsiY2x1c3Rlcjp1c2VyIiwiZGF0YXNldF9tYW5hZ2VtZW50OnVzZXIiLCJkYXRhc2V0czpyZWFkIiwiZGF0YXNldHM6d3JpdGUiLCJtb2RlbHM6cmVhZCIsIm1vZGVsczp3cml0ZSIsInBsYXRmb3JtOnVzZXIiLCJzbGljZXI6dXNlciIsInRva2VuOmNyZWF0ZSIsInVzZXJzOmFkbWluIl0sImlzX2FkbWluIjp0cnVlfQ.XpK6sjo8sJL8KUWOt9PN1nvR4vzLeRggptxiOC8Cwy8
+export QUR8ML_PLATFORM_ACCESS_TOKEN=43LE4eSotzipSOnxDIIUnZI6JwSFKI
+export PLATFORM_ACCESS_TOKEN=43LE4eSotzipSOnxDIIUnZI6JwSFKI
+
+# wandb
+export WANDB_API_KEY=a15fce876851c60bfb1c686e0154f5f63e9b8c98
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
